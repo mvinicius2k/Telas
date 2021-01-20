@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Telas</string>
+    <string name="et_insert">Insira coisas</string>
+    <string name="btn_add">Adicionar</string>
+    <string name="txt_title">Itens</string>
+    <string name="txt_empty">Lista vazia</string>
+    <string name="btn_new">Novo</string>
+    <string name="btn_edit">Editar</string>
+    <string name="et_id">Posição do item a editar</string>
+    <string-array name="spn_id_array">
+        <item>Veículo</item>
+        <item>Livro</item>
+        <item>Hardware</item>
+        <item>Comida</item>
+        <item>Outro</item>
+    </string-array>
+
+</resources>
