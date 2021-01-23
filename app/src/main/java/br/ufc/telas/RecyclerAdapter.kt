@@ -14,7 +14,9 @@ class RecyclerAdapter (private val items: ArrayList<Item>) : RecyclerView.Adapte
 
     class MyViewHolder(view: View) : RecyclerView.ViewHolder(view){
         val txtLeft: TextView = view.findViewById(R.id.txt_left)
-        val txtRight: TextView = view.findViewById(R.id.txt_right)
+        val txtName: TextView = view.findViewById(R.id.txt_name)
+        val txtQtd: TextView = view.findViewById(R.id.txt_qtd)
+        val txtValue: TextView = view.findViewById(R.id.txt_value)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerAdapter.MyViewHolder {
@@ -30,7 +32,10 @@ class RecyclerAdapter (private val items: ArrayList<Item>) : RecyclerView.Adapte
     override fun onBindViewHolder(holder: RecyclerAdapter.MyViewHolder, position: Int) {
         Log.d(TAG,"Adicionado")
         holder.txtLeft.text = items[position].getTypeChar().toString()
-        holder.txtRight.text = items[position].name
+        holder.txtName.text = items[position].name
+        holder.txtQtd.text = "Quatidade: " + items[position].qtd
+        holder.txtValue.text = "Quatidade: R$ " + items[position].getPriceStr()
+
     }
 
 

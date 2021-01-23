@@ -8,8 +8,10 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        >
 
         <TextView
             android:id="@+id/txt_title"
@@ -26,7 +28,7 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_items"
             android:layout_width="match_parent"
-            android:layout_height="157dp"
+            android:layout_height="wrap_content"
             android:visibility="gone" />
 
         <TextView
@@ -42,14 +44,21 @@
             android:layout_marginTop="25dp"
             android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/btn_new"
+            <ToggleButton
+                android:id="@+id/tb_new"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="2dp"
-                android:layout_marginEnd="5dp"
                 android:layout_weight="1"
-                android:text="@string/btn_new" />
+                android:textOff="@string/tb_new"
+                android:textOn="@string/tb_go" />
+
+            <ToggleButton
+                android:id="@+id/tb_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textOff="@string/tb_edit"
+                android:textOn="@string/tb_go" />
 
             <EditText
                 android:id="@+id/et_id"
@@ -57,19 +66,19 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:autofillHints=""
+                android:digits="0123456789"
                 android:ems="10"
-                android:inputType="textPersonName"
-                android:text="@string/et_id"
+                android:hint="@string/et_id"
+                android:inputType="number"
                 android:visibility="gone" />
 
-            <Button
-                android:id="@+id/btn_edit"
+            <Spinner
+                android:id="@+id/spn_id"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
-                android:layout_marginEnd="2dp"
                 android:layout_weight="1"
-                android:text="@string/btn_edit" />
+                android:visibility="gone" />
+
         </LinearLayout>
 
     </LinearLayout>
